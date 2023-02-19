@@ -1,0 +1,10 @@
+<h2><%= @task.title %></h2>
+<p><%= @task.completed ? "this task has been completed" : "this task has not been completed" %></p>
+<br>
+<%= link_to "Delete",
+  task_path(@task),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>
+<br>
+<br>
+<p><%= link_to 'back to task list', "/task" %></p>
